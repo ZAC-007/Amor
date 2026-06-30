@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa História de Amor ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fundo: textos/corações caindo (ativo em todas as fases) -->
+  <div id="falling-bg" class="falling-bg" aria-hidden="true"></div>
+
+  <div id="app-root">
+
+    <!-- ===================== FASE 1: CAPA ===================== -->
+    <section id="phase-cover" class="phase phase-center is-active">
+      <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+      <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+      <div class="card card-cover">
+        <div class="icon-badge icon-badge-pulse">
+          <span class="icon-heart icon-heart-bounce">❤</span>
+        </div>
+
+        <div class="cover-text">
+          <h1 class="title-gradient">Oii, Minha princesa... ❤️</h1>
+          <p class="subtitle">
+            Eu preparei um espaço único, mágico e interativo para contarmos a nossa
+            história de um jeito que você nunca viu.
+          </p>
+        </div>
+
+        <div class="cover-action">
+          <button id="btn-start-experience" class="btn btn-primary btn-block">
+            Começar Nossa Jornada
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+
+        <div class="cover-footnote">Feito com todo carinho do mundo por mim</div>
+      </div>
+    </section>
+
+    <!-- ===================== FASE 2: PRÓLOGO (TYPEWRITER) ===================== -->
+    <section id="phase-prologue" class="phase phase-center">
+      <div class="card card-prologue">
+        <div class="typewriter-wrap">
+          <span id="typewriter-text" class="typewriter-text"></span>
+        </div>
+        <div class="prologue-action">
+          <button id="btn-enter-dashboard" class="btn btn-primary">
+            Abrir Nosso Diário
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FASE 3: DASHBOARD ===================== -->
+    <section id="phase-dashboard" class="phase phase-dashboard">
+
+      <header class="header">
+        <div class="header-inner">
+          <div class="brand">
+            <div class="brand-icon"><span class="icon-heart">❤</span></div>
+            <div class="brand-text">
+              <h1 id="brand-names" class="brand-title"></h1>
+              <span class="brand-subtitle">Nossa Jornada Interativa</span>
+            </div>
+          </div>
+
+          <nav id="tabs-nav" class="tabs-nav">
+            <button class="tab-btn is-active" data-tab="counter">
+              <span class="tab-icon">🕐</span><span class="tab-label">Nosso Tempo</span>
+            </button>
+            <button class="tab-btn" data-tab="reasons">
+              <span class="tab-icon">✨</span><span class="tab-label">03 Motivos</span>
+            </button>
+            <button class="tab-btn" data-tab="letter">
+              <span class="tab-icon">✉️</span><span class="tab-label">Carta</span>
+            </button>
+            <button class="tab-btn" data-tab="recados">
+              <span class="tab-icon">💬</span><span class="tab-label">Mural de Recados</span>
+            </button>
+            <button class="tab-btn" data-tab="proposal">
+              <span class="tab-icon tab-icon-heart">❤</span><span class="tab-label">Futuro</span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="content-card">
+
+          <!-- TAB: CONTADOR -->
+          <div class="tab-panel is-active" id="tab-counter">
+            <div id="counter-root"></div>
+            <div class="quote-card">
+              "O amor não é sobre quantos dias, meses ou anos estamos juntos, mas sobre
+              o quanto nos amamos a cada novo amanhecer." ❤️
+            </div>
+
+            <div class="nicknames-section" id="nicknames-section">
+              <div class="section-head">
+                <span class="eyebrow eyebrow-pink">✨ Nossos Apelidos Carinhosos</span>
+                <h4 class="section-title">Como Eu Gosto de te Chamar... 🥰</h4>
+                <p class="section-sub">
+                  Selecionei todos os apelidos especiais que dou para você (e inventei
+                  vários outros super fofos!).
+                </p>
+              </div>
+
+              <div class="nickname-spotlight" id="nickname-spotlight">
+                <p class="nickname-placeholder">
+                  Qual apelido combina com você agora? Toque no botão abaixo ou
+                  selecione um para ver!
+                </p>
+              </div>
+
+              <div class="spotlight-action">
+                <button id="btn-random-nickname" class="btn btn-secondary btn-sm">
+                  🔀 Sorteador de Apelido
+                </button>
+              </div>
+
+              <div class="nicknames-grid" id="nicknames-grid"></div>
+            </div>
+          </div>
+
+          <!-- TAB: 100 MOTIVOS -->
+          <div class="tab-panel" id="tab-reasons">
+            <div id="reasons-root"></div>
+          </div>
+
+          <!-- TAB: CARTA -->
+          <div class="tab-panel" id="tab-letter">
+            <div id="letter-root"></div>
+          </div>
+
+          <!-- TAB: MURAL DE RECADOS -->
+          <div class="tab-panel" id="tab-recados">
+            <div id="notes-root"></div>
+          </div>
+
+          <!-- TAB: PROPOSTA -->
+          <div class="tab-panel" id="tab-proposal">
+            <div id="proposal-root"></div>
+          </div>
+
+        </div>
+
+        <div class="next-action" id="next-action-wrap">
+          <button id="btn-narrative-next" class="btn btn-ghost">
+            Continuar Nossa História <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div id="footer-names"></div>
+        <div class="footer-sub">Nossa História de Amor © <span id="footer-year"></span></div>
+      </footer>
+
+    </section>
+
+  </div>
+
+  <!-- canvas-confetti: biblioteca JS pura (sem framework) para os efeitos de confete -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
